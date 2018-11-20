@@ -13,4 +13,4 @@ A WeiXin Mini App if you like it give me a star! Than you in advance!
 ![照片排序](https://github.com/Rayongice/wxmini-exam/blob/master/resource/project-preview/img_03.png)
 
 
-![照片删除](https://github.com/Rayongice/wxmini-exam/blob/master/resource/project-preview/img_03.png)
+![照片删除](https://github.com/Rayongice/wxmini-exam/blob/master/resource/project-preview/img_04.png)
