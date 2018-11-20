@@ -1,5 +1,4 @@
 Page({
-
   data: {
     images: [],
     imgsAmount: '0',
@@ -20,8 +19,8 @@ Page({
   //添加图片
   addImgSucFun: function(res) {
     let tempFilePaths = res.tempFilePaths;
-    let images = this.data.images.concat(tempFilePaths)
-    let imgsAmount = images.length
+    let images = this.data.images.concat(tempFilePaths);
+    let imgsAmount = images.length;
     this.setData({
       images: images,
       imgsAmount: imgsAmount,
@@ -32,80 +31,37 @@ Page({
   //放大图片
   bindEnlargeImgFunc: function(e) {
     let urls = [];
-    urls.push(e.currentTarget.dataset.src)
+    urls.push(e.currentTarget.dataset.src);
     wx.previewImage({
       urls: urls
-    })
+    });
   },
-  //删除图片
+  //删除图片事件
   bindDelFunc: function(e) {
     wx: wx.showModal({
       title: '删除图片',
       content: '你确定删除吗？',
       confirmColor: '#2a8cff',
       success: (res) => {
-        let index = e.currentTarget.dataset.index;
-        let that = this;
-        if (res.confirm) {
-          let images = this.data.images;
-          images.splice(index, 1);
-          let imgsAmount = that.data.imgsAmount - 1;
-          that.setData({
-            images: images,
-            imgsAmount: imgsAmount,
-            selectStatus: imgsAmount <= 0 ? false : true
-          })
-        }
+        this.delImgfunc(res, e);
       }
-    })
+    });
   },
-  //获取第一个值
-  bindGetFirstNum: function(e) {
-    let length = this.data.images.length;
+  //删除图片
+  delImgfunc: function(res,e) {
+    let index = e.currentTarget.dataset.index;
     let that = this;
-    if (e.detail.value > length) {
-      wx.showModal({
-        title: '图片不存在',
-        content: '请重新填写',
-        confirmColor: '#2a8cff',
-        success: (res) => {
-          if (res.confirm) {
-            that.setData({
-              firstNum: ''
-            })
-          }
-        }
-      })
-    } else {
+    if (res.confirm) {
+      let images = that.data.images;
+      images.splice(index, 1);
+      let imgsAmount = that.data.imgsAmount - 1;
       that.setData({
-        firstNum: e.detail.value
-      })
+        images: images,
+        imgsAmount: imgsAmount,
+        selectStatus: imgsAmount <= 0 ? false : true
+      });
     }
   },
-  //获取第二个值
-  bindGetSecNum: function(e) {
-    let length = this.data.images.length;
-    let that = this;
-    if (e.detail.value > length) {
-      wx.showModal({
-        title: '图片不存在',
-        content: '请重新填写',
-        confirmColor: '#2a8cff',
-        success: (res) => {
-          if (res.confirm) {
-            that.setData({
-              secNum: ''
-            })
-          }
-        }
-      })
-    } else {
-      that.setData({
-        secNum: e.detail.value
-      })
-    }
-  },
-
 
   //上传图片
   bindUploadPhoto: function() {
@@ -119,13 +75,11 @@ Page({
           this.uploadImgsToServer(data)
         }
       }
-
-    })
+    });
 
   },
-  //上传图片
+  //上传图片到服务器
   uploadImgsToServer: function(data) {
-
     for (let i = 0; i < data.length; i++) {
       wx.uploadFile({
         url: '',
@@ -135,7 +89,7 @@ Page({
           //根据返回状态码，提示用户
           console.log(res);
         }
-      })
+      });
     }
   },
 
@@ -150,14 +104,14 @@ Page({
           this.navToIndex();
         }
       }
-    })
+    });
 
   },
   //返回首页
   navToIndex: function() {
     wx: wx.redirectTo({
       url: '../../pages/index/index',
-    })
+    });
   },
   //显示弹窗
   bindShowDialog: function(e) {
@@ -183,32 +137,31 @@ Page({
   bindChangeIndex: function() {
     let conditions = {
       //空值
-      emptyCon:this.data.userInputData == "" ? true : false,
+      emptyCon: this.data.userInputData == "" ? true : false,
       //数组越界
-      outIndexCon:this.data.userInputData > this.data.images.length ? true : false,
+      outIndexCon: this.data.userInputData > this.data.images.length ? true : false,
       //恶意输入
-      invalidValueCon:this.data.userInputData <= 0 ? true : false,
+      invalidValueCon: this.data.userInputData <= 0 ? true : false,
       //非数字输入
-      notNumberCon:isNaN(this.data.userInputData),
+      notNumberCon: isNaN(this.data.userInputData),
       //非整数类型输入
       floatInputCon: !(this.isIntegerFunc(this.data.userInputData))
     };
-    if (conditions.emptyCon)
-    {
+    if (conditions.emptyCon) {
       let info = "序号不能为空";
       this.userNoticeFunc(info);
-    } else if (conditions.outIndexCon){
+    } else if (conditions.outIndexCon) {
       let info = "图片不存在";
       this.userNoticeFunc(info);
-    } else if (conditions.invalidValueCon || conditions.notNumberCon || conditions.isIntegerFunc){
+    } else if (conditions.invalidValueCon || conditions.notNumberCon || conditions.isIntegerFunc) {
       let info = "请输入正确的图片序号";
       this.userNoticeFunc(info);
-    }else{
+    } else {
       this.swapIndex();
     }
   },
   //交换图片
-  swapIndex:function(){
+  swapIndex: function() {
     let fromIndexData = this.data.fromIndexData;
     let userInputData = this.data.userInputData - 1;
     let pics = this.data.images;
@@ -222,7 +175,7 @@ Page({
     });
   },
   //用户提示
-  userNoticeFunc:function(info){
+  userNoticeFunc: function(info) {
     wx.showModal({
       title: '提示',
       content: info,
@@ -230,7 +183,7 @@ Page({
     })
   },
   //判断是否为浮点数
-  isIntegerFunc:function(val){
+  isIntegerFunc: function(val) {
     return typeof val === 'number' && val % 1 === 0;
   }
 

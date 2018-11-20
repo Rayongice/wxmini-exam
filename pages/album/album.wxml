@@ -20,7 +20,7 @@
       <view class='icon-number' bindtap='bindShowDialog' data-index="{{index}}">{{index+1}}</view>
     </view>
     <view class='item'>
-      <image src='../../resource/images/add3.png' mode='aspectFill' class="img img-add" bindtap='bindChooseImgFunc'></image>
+      <image src='../../resource/images/add3.png' mode='aspectFill' class="img" bindtap='bindChooseImgFunc'></image>
     </view>
   </view>
 
@@ -32,11 +32,11 @@
   <view class="modal-title">输入更改序号</view>
   <view class="modal-content">
     <view class="modal-input">
-      <input type="number" value="{{userInputData}}" bindblur='bindUserInput'class="input" placeholder="图片上标序号"></input>
+      <input type="number" value="{{userInputData}}" bindblur='bindUserInput'class="input" placeholder="{{fromIndexData+1}}"></input>
     </view>
   </view>
   <view class="modal-footer">
-    <view class="btn-cancel" bindtap="bindHideModal" data-status="cancel">取消</view>
+    <view class="btn-cancel" bindtap="bindHideModal" data-status="cancel">关闭</view>
     <view class="modal-footer-separate-line"></view>
     <view class="btn-confirm" bindtap="bindChangeIndex" data-status="confirm">更改</view>
   </view>
