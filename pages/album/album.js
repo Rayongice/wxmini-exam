@@ -175,66 +175,96 @@ Page({
   },
   //获取用户输入图片序号
   bindUserInput: function(e) {
-    let that = this;
-    let length = this.data.images.length;
-    let fromIndexData = this.data.fromIndexData;
-    let indexData = e.detail.value;
-    if (indexData > length) {
-      wx.showModal({
-        title: '图片不存在',
-        content: '请重新填写',
-        confirmColor: '#2a8cff',
-        success: (res) => {
-          if (res.confirm) {
-            that.setData({
-              userInputData: ''
-            })
-          }
-        }
-      })
-    } else if (indexData == fromIndexData+1) {
-      wx.showModal({
-        title: '序号相等',
-        content: '请重新填写',
-        confirmColor: '#2a8cff',
-        success: (res) => {
-          if (res.confirm) {
-            that.setData({
-              userInputData: ''
-            })
-          }
-        }
-      })
-    } else {
-      this.setData({
-        userInputData: e.detail.value
-      })
+    // let that = this;
+    // let length = this.data.images.length;
+    // let fromIndexData = this.data.fromIndexData;
+    // let indexData = e.detail.value;
+    // if (indexData > length && indexData <= 0) {
+    //   wx.showModal({
+    //     title: '图片不存在',
+    //     content: '请重新填写',
+    //     confirmColor: '#2a8cff',
+    //     success: (res) => {
+    //       if (res.confirm) {
+    //         that.setData({
+    //           userInputData: ''
+    //         })
+    //       }
+    //     }
+    //   })
+    // } else if (indexData == fromIndexData+1) {
+    //   wx.showModal({
+    //     title: '序号相等',
+    //     content: '请重新填写',
+    //     confirmColor: '#2a8cff',
+    //     success: (res) => {
+    //       if (res.confirm) {
+    //         that.setData({
+    //           userInputData: ''
+    //         })
+    //       }
+    //     }
+    //   })
+    // } else {
+
+    // }
+    this.setData({
+      userInputData: e.detail.value
+    })
+  },
+  //触发“更改”按钮
+  bindChangeIndex: function() {
+    let conditions = {
+      //空值
+      emptyCon:this.data.userInputData == "" ? true : false,
+      //数组越界
+      outIndexCon:this.data.userInputData > this.data.images.length ? true : false,
+      //恶意输入
+      invalidValueCon:this.data.userInputData <= 0 ? true : false,
+      //非数字输入
+      notNumberCon:isNaN(this.data.userInputData),
+      //非整数类型输入
+      floatInputCon: !(this.isIntegerFunc(this.data.userInputData))
+    };
+    if (conditions.emptyCon)
+    {
+      let info = "序号不能为空";
+      this.userNoticeFunc(info);
+    } else if (conditions.outIndexCon){
+      let info = "图片不存在";
+      this.userNoticeFunc(info);
+    } else if (conditions.invalidValueCon || conditions.notNumberCon || conditions.isIntegerFunc){
+      let info = "请输入正确的图片序号";
+      this.userNoticeFunc(info);
+    }else{
+      this.swapIndex();
     }
   },
   //交换图片
-  bindChangeIndex: function() {
-    if(this.data.userInputData == "")
-    {
-      wx.showModal({
-        title: '提示',
-        content: '更改序号不能为空',
-        confirmColor: '#2a8cff',
-      })
-    }else{
-      let fromIndexData = this.data.fromIndexData;
-      let userInputData = this.data.userInputData - 1;
-      let pics = this.data.images;
-      let tempData = pics[userInputData];
+  swapIndex:function(){
+    let fromIndexData = this.data.fromIndexData;
+    let userInputData = this.data.userInputData - 1;
+    let pics = this.data.images;
+    let tempData = pics[userInputData];
 
-      pics[userInputData] = pics[fromIndexData];
-      pics[fromIndexData] = tempData;
-      this.setData({
-        images: pics,
-        showModalStatus: false
-      });
-
-    }
-
+    pics[userInputData] = pics[fromIndexData];
+    pics[fromIndexData] = tempData;
+    this.setData({
+      images: pics,
+      showModalStatus: false
+    });
+  },
+  //用户提示
+  userNoticeFunc:function(info){
+    wx.showModal({
+      title: '提示',
+      content: info,
+      confirmColor: '#2a8cff',
+    })
+  },
+  //判断是否为浮点数
+  isIntegerFunc:function(val){
+    return typeof val === 'number' && val % 1 === 0;
   }
 
 })
