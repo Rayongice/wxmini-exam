@@ -1,0 +1,19 @@
+Page({
+
+  data: {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+  bindToSignature:function(){
+    wx.navigateTo({
+      url:'../../pages/signature/signature'
+    })
+  }
+
+})

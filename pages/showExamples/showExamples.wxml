@@ -1,0 +1,10 @@
+<view class="container">
+  <view class='show-area'>
+    <text class='show-area-title'>要求:无污点无反光清晰可见</text>
+    <image class="show-area-img" src='../../resource/images/photo_06.png' mode="aspectFit"/>
+    <image class="show-area-img" src='../../resource/images/photo_03.png' mode="aspectFit"/>
+    <image class="show-area-img" src='../../resource/images/photo_01.png' mode="aspectFit"/>
+    <image class="show-area-img" src='../../resource/images/photo_02.png' mode="aspectFit"/>
+  </view>
+
+</view>

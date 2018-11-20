@@ -1,0 +1,56 @@
+<view class='top-title'>
+  <block wx:if="{{selectStatus}}">
+    <view class='top-spot-true'></view>
+    <text class='top-text'>您共选择了<text class='span'>{{imgsAmount}}</text>张图片,点击序号可调换顺序！</text>
+  </block>
+  <block wx:else>
+    <view class='top-spot-false'></view>
+    <text class='top-text'>您尚未选择任何图片！</text>
+  </block>
+</view>
+<!-- 图片展示区 -->
+<view class='test'>
+  <view class='container'>
+    <view class='item' wx:for="{{images}}" wx:key="">
+      <image src='{{item}}' mode='aspectFill' class="img" data-src="{{item}}" bindtap='bindEnlargeImgFunc'></image>
+      <view class="btn-del" bindtap='bindDelFunc' data-index="{{index}}">
+        <image src='../../resource/images/clear2.png'></image>
+      </view>
+      <!-- 图片上标序号 -->
+      <view class='icon-number' bindtap='bindShowDialog' data-index="{{index}}">{{index+1}}</view>
+    </view>
+    <view class='item'>
+      <image src='../../resource/images/add3.png' mode='aspectFill' class="img img-add" bindtap='bindChooseImgFunc'></image>
+    </view>
+  </view>
+
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModalStatus}}"></view>
+<view class="modal-dialog" wx:if="{{showModalStatus}}">
+  <view class="modal-title">输入更改序号</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="number" value="{{userInputData}}" bindblur='bindUserInput' class="input" placeholder="图片上标序号"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="bindHideModal" data-status="cancel">取消</view>
+    <view class="modal-footer-separate-line"></view>
+    <view class="btn-confirm" bindtap="bindChangeIndex" data-status="confirm">更改</view>
+  </view>
+</view>
+
+
+
+
+
+<view class='btns-container'>
+  <view class="btns1" bindtap='bindUploadPhoto'>
+    <text class="btn1-text">上传图片</text>
+  </view>
+  <view class="btns2" bindtap='bindNavtoIndex'>
+    <text class="btn2-text">返回首页</text>
+  </view>
+</view>

@@ -1,0 +1,271 @@
+<view class='container'>
+  <!-- <view class='header'>
+    <text class='header-title'>全国硕士生招生考试报名信息简表</text>
+    <text class='header-subtitle'>2019年12月</text>
+  </view>
+  <view class='first-column'>
+    <view class='first-column-left'>
+      <label>报名号:</label>
+      <text class="first-text">12321654</text>
+    </view>
+
+    <view class='first-column-right'>
+      <label>报名点代码:</label>
+      <text class="first-text">1233</text>
+    </view>
+  </view> -->
+
+  <view class="second-column-width second-bg">
+    <view class='second-column-title'>个人信息</view>
+    <view class='second-img-container'>
+      <image class='second-img' src="../../resource/images/image7_03.png" mode='aspectFit'></image>
+    </view>
+    <view class='second-cell'>
+      <label class='second-cell-label'>姓名</label>
+      <text class="second-cell-text">张三</text>
+      <view class='seprator'></view>
+      <text class="second-cell-text">Zhang San</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">性别</label>
+      <text class="second-cell-text">男</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">民族</label>
+      <text class="second-cell-text">汉族</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">出生年月</label>
+      <text class="second-cell-text">1991-12-07</text>
+    </view>
+    <!-- 华丽的分割线 -->
+    <view class='second-cell'>
+      <label class="second-cell-label">手机号码</label>
+      <text class="second-cell-text">13632321313</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">E-mail</label>
+      <text class="second-cell-text">zhangsan@sina.com</text>
+    </view>
+    <!-- 华丽的分割线 -->
+
+  </view>
+  <view class="gray-view"></view>
+  <view class="second-column fourth-column">
+    <view class='second-column-title red-title'>报考信息</view>
+    <view class='second-cell'>
+      <label class='second-cell-label'>报名号</label>
+      <text class="second-cell-text">12321654</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class='second-cell-label'>报考单位</label>
+      <text class="second-cell-text">20356 郑州大学</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">院系所</label>
+      <text class="second-cell-text">320 会计学院</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">报考专业</label>
+      <text class="second-cell-text">125300会计</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">研究方向</label>
+      <text class="second-cell-text">02 (非全日制) 会计</text>
+    </view>
+
+
+    <view class='second-cell'>
+      <label class="second-cell-label">政治理论</label>
+      <text class="second-cell-text">199 管理类联考综合能力</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">外国语</label>
+      <text class="second-cell-text">204 英语二</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">业务课一</label>
+      <text class="second-cell-text">无</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">业务课二</label>
+      <text class="second-cell-text test">无</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">报名时间</label>
+      <text class="second-cell-text">20161031</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">确认时间</label>
+      <text class="second-cell-text">201912</text>
+    </view>
+  </view>
+  <view class="gray-view"></view>
+  <view class="second-column-width">
+
+    <view class='second-column-title'>身份信息</view>
+    <!-- 华丽的分割线 -->
+    <view class='second-cell'>
+      <label class="second-cell-label">证件类型</label>
+      <text class="second-cell-text">中国居民身份证</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">证件号码</label>
+      <text class="second-cell-text">44030722229009912</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">婚姻状况</label>
+      <text class="second-cell-text">未婚</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">政治面貌</label>
+      <text class="second-cell-text">党员</text>
+    </view>
+    <!-- 华丽的分割线 -->
+
+    <view class='second-cell'>
+      <label class='second-cell-label'>考生来源</label>
+      <text class="second-cell-text">其他在职人员</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">报考类别</label>
+      <text class="second-cell-text">定向就业</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">考试方式</label>
+      <text class="second-cell-text">管理类联考</text>
+    </view>
+
+
+    <view class='second-cell'>
+      <label class="second-cell-label">档案所在单位</label>
+      <text class="second-cell-text">大业市人才交流中心</text>
+    </view>
+
+
+    <view class='second-cell'>
+      <label class="second-cell-label">是否现役军人</label>
+      <text class="second-cell-text">非现役军人</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">档案所在单位地址</label>
+      <text class="second-cell-text">大业市长宁区台湾路人才大\n市场大厦616大厅</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label"></label>
+      <text class="second-cell-text"></text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">档案所在单位邮政编码</label>
+      <text class="second-cell-text test">10010</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">定向就业单位</label>
+      <text class="second-cell-text">沃尔玛（中国）投资有限公司</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">学习工作单位</label>
+      <text class="second-cell-text">沃尔玛（中国）投资有限公司</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">考生作弊情况</label>
+      <text class="second-cell-text">无</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="third-long-text">入伍前入学年月/所在高校/专业/学习形式/学历证书编号/入伍年月/批准机关/批准证书编号/退役年月/批准机关/退出现役证编号</label>
+      <text class="second-cell-text"></text>
+    </view>
+  </view>
+
+  <view class="gray-view"></view>
+  <view class="second-column-width">
+    <view class='second-column-title'>学历信息</view>
+    <view class='second-cell'>
+      <label class='second-cell-label'>毕业院校</label>
+      <text class="second-cell-text">大业大学</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">毕业专业</label>
+      <text class="second-cell-text">旅游管理</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">最后学历</label>
+      <text class="second-cell-text">本科毕业</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">最后学位</label>
+      <text class="second-cell-text">学士学位</text>
+    </view>
+
+
+    <view class='second-cell'>
+      <label class="second-cell-label">获最后学位年月</label>
+      <text class="second-cell-text">201506</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">学习形式</label>
+      <text class="second-cell-text">普通全日制</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">注册学号</label>
+      <text class="second-cell-text">4444555</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">专项计划</label>
+      <text class="second-cell-text test">无</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">学历毕业证号</label>
+      <text class="second-cell-text">52226812</text>
+    </view>
+
+    <view class='second-cell'>
+      <label class="second-cell-label">学位证书编号</label>
+      <text class="second-cell-text">23345678</text>
+    </view>
+    <view class='second-cell'>
+      <label class="second-cell-label">考生作弊情况</label>
+      <text class="second-cell-text">无</text>
+    </view>
+
+  </view>
+
+
+
+  <view class='footer-bg'>
+    <view class="btns" bindtap='bindToSignature'>
+      <text class="btn-text">签署确认书</text>
+    </view>
+
+    <view class='footer'>
+      <text class="footer-text">大业市招生考试办公室</text>
+    </view>
+  </view>
+
+  <!-- <view class='btn'>
+    <image class="btn-img" src='../../resource/images/image8_03.png' mode='aspectFit' bindtap='bindToSignature'></image>
+    <text class='btn-text'>大业市考试招生办公室</text>
+  </view> -->
+
+</view>

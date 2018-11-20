@@ -1,0 +1,27 @@
+.container{
+  margin: 0;
+  padding:0;
+  background: #f4f4f4;
+}
+.show-area{
+  width: 100%;
+  text-align: center;
+}
+.show-area-title{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #e9f4fc;
+  text-align: center;
+  border-bottom: 2rpx solid #d4eafa;
+  border-top: 2rpx solid #d4eafa;
+  font-family: sans-serif;
+  font-size: 32rpx;
+  color: #8c8d8f;
+}
+.show-area-img
+{
+  margin-top: 15rpx;
+  width: 80%;
+}

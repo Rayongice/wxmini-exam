@@ -1,0 +1,274 @@
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #f3f3f3;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.swiper-tab-item {
+  width: 50%;
+  color: #434343;
+}
+
+.active {
+  color: #2a8cff;
+  border-bottom: 2rpx solid #2a8cff;
+}
+
+.content {
+  width: 100%;
+}
+
+.first-column {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border-bottom: 1rpx solid #e3e3e3;
+  align-items: center;
+}
+
+.text-photo {
+  flex: 1;
+  width: 300rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  font-family: sans-serif;
+  font-size: 35rpx;
+  color: #000;
+  letter-spacing: 2rpx;
+}
+/*华丽的分割线*/
+.header-btn {
+  margin-right: 32rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  width: 160rpx;
+  text-align: center;
+  background:  #2a8cff;
+  border-radius: 8rpx;
+}
+.header-btn-text{
+  font-size: 30rpx;
+  color: #fff;
+}
+/*华丽的分割线*/
+
+
+.second-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.card-style {
+  width: 33%;
+  height: 170rpx;
+  margin-top: 40rpx;
+}
+/*华丽的分割线*/
+.third-column {
+  background: #f4f4f4;
+  padding-top: 20rpx;
+  margin-top: 30rpx;
+}
+
+.warn-title {
+  height: 60rpx;
+  display: flex;
+  padding-left: 30rpx;
+}
+
+.text-warn {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 15rpx;
+  color: #707172;
+}
+
+.icon-warn {
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+}
+
+.warn-content {
+  font-family: sans-serif;
+  font-size: 32rpx;
+  color: #a3a4a5;
+  margin-top: -30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.gray-border {
+  height: 30rpx;
+  background: #f4f4f4;
+  margin-top: 15rpx;
+}
+
+.fourth-column {
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background: #fff;
+}
+
+.verify-text {
+  font-family: sans-serif;
+  font-weight: 500rpx;
+  font-size: 32rpx;
+  flex: 1;
+}
+.verify-btns-ok{
+  margin-right: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  background:  #2a8cff;
+  border-radius: 8rpx;
+} 
+.verify-btns-no{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  background:  #ececec;
+  border-radius: 8rpx;
+} 
+.verify-btns-textok{
+  font-size: 28rpx;
+  color: #fff;
+}
+.verify-btns-textno{
+  font-size: 28rpx;
+  color: #000;
+}
+.verify-btn {
+  width: 120rpx;
+  height: 60rpx;
+}
+
+.margin-right {
+  margin-right: 10rpx;
+}
+
+.btns {
+  margin-top: 50rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12rpx;
+  text-align: center;
+  background: #2a8cff;
+}
+
+.btn-text {
+  color: #fff;
+  font-size: 35rpx;
+  font-family: sans-serif;
+  letter-spacing: 2rpx;
+}
+.footer {
+  margin-top: 16rpx;
+  font-size: 26rpx;
+  color: #a3a4a5;
+  text-align: center;
+  display:flex;
+  flex-flow: column;
+
+
+}
+.footer-text1{
+  font-size: 18rpx;
+}
+.footer-text2{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+/* 非河南户籍 */
+
+
+
+.unit-column-title {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  height: 80rpx;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.unit-label{
+  flex: 1.5;
+}
+
+.unit-input {
+  flex: 1;
+  font-size: 32rpx;
+}
+.unit-icon{
+  flex: 0.3;
+}
+
+.unit-card {
+  width: 33%;
+  height: 170rpx;
+  margin-top: 40rpx;
+}
+
+.name-column-title {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  height: 80rpx;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.name-label{
+    flex: 1.5;
+}
+
+.name-input {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.name-card {
+  width: 33%;
+  height: 170rpx;
+  margin-top: 40rpx;
+}
+.name-icon{
+    flex: 0.3;
+}

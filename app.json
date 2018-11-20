@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/photo/photo",
+    "pages/upload/upload",
+    "pages/payment/payment",
+    "pages/infoTable/infoTable",
+    "pages/info/info",
+    "pages/album/album",
+    "pages/signature/signature",
+    "pages/signatureOk/signatureOk",
+    "pages/paymentOk/paymentOk",
+    "pages/showExamples/showExamples",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

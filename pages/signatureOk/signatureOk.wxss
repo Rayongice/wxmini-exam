@@ -1,0 +1,41 @@
+.container{
+
+}
+.images{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.images-ok{
+  height: 200rpx;
+  width: 200rpx;
+}
+.images-text{
+  margin-top:60rpx;
+  font-weight: bold;
+}
+.text-margin{
+  margin-top: 20rpx;
+}
+.longtext{
+  text-align: center;
+  font-size: 32rpx;
+  color: #c4c4c4;
+}
+.btns{
+  margin-top: 160rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12rpx;
+  text-align: center;
+  background: #2a8cff;
+}
+.btn-text{
+  color: #fff;
+  font-size: 35rpx;
+  font-family: sans-serif;
+  letter-spacing: 2rpx;
+}

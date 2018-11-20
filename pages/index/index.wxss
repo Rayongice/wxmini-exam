@@ -1,0 +1,68 @@
+.container{
+  margin: 0;
+  padding: 0;  
+}
+.banner{
+  height: 304rpx;
+  width: 100%;
+}
+.banner-image{
+  position: relative;
+  top: -80rpx;
+  width: 100%;
+}
+.type-info{
+  font-family: sans-serif;
+  font-size: 35rpx;
+
+  margin-top:40rpx;
+  width: 100%;
+}
+.input-first{
+  height: 102rpx;
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1rpx solid #e3e3e3;
+  align-items: center;
+  padding-left: 30rpx;
+}
+.infor-label{
+  flex: 0.4;
+}
+.infor-input{
+  flex: 1;
+  font-size: 32rpx;
+}
+.btns{
+  margin-top: 80rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12rpx;
+  text-align: center;
+  background: #2a8cff;
+}
+.btn-text{
+  color: #fff;
+  font-size: 35rpx;
+  font-family: sans-serif;
+  letter-spacing: 2rpx;
+}
+.btn-forgot{
+  margin-top: 20rpx;
+}
+.btn-forgot-text{
+  font-size: 28rpx;
+  color: #449aff;
+}
+.footer{
+  margin-top: 230rpx;
+  margin-bottom: 40rpx;
+}
+.footer-text{
+  font-family: sans-serif;
+  font-size: 24rpx;
+  color: #c4c4c4;
+}

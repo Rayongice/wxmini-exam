@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='header'>
+    <view class='header-text'>请在下面方框中使用正楷签名</view>
+    <view class='header-btn' bindtap='bindClear'>
+      <text class="header-btn-text">清除</text>
+    </view>
+  </view>
+  <view class="signature">
+    <canvas canvas-id="canvas" class="canvas" bindtouchmove='move' bindtouchstart='start' bindtouchend='end' bindtouchcancel='cancel' bindlongtap='tap' disable-scroll='true' binderror='error'></canvas>
+  </view>
+
+  <view class="footer-bg">
+    <view class="btns" bindtap='uploadSignature'>
+      <text class="btn-text">提交</text>
+    </view>
+
+    <view class="btns-cancel" bindtap='bindClear'>
+      <text class="btn-cancel-text">取消</text>
+    </view>
+
+    <view class="footer">
+      <text class="footer-text">大业市考试招生办公室</text>
+    </view>
+  </view>
+
+
+  <!-- <view class='btns'>
+    <image class="btn-img" src='../../resource/images/image9_02.png' mode='aspectFit' bindtap='uploadSignature'></image>
+    <image class="btn-img" src='../../resource/images/image9_03.png' mode='aspectFit' bindtap='bindClear'></image>
+  </view> -->
+</view>

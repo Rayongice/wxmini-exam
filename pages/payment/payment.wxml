@@ -1,0 +1,17 @@
+<view class='container'>
+  <view class='btns' bindtap='bindToClip'>
+    <text class="btns-text">复制链接</text>
+  </view>
+  <view class='wallet'>
+      <image class="images-wallet"src='../../resource/images/image5_06.png' mode='aspectFit'></image>
+  </view>
+  <view class='texts'>
+    <text>请登陆以下地址进行缴费后，返回刷新此页面</text>
+    <text>http://www.daye.cn/search/index?searchType=icon&q=签名</text>
+  </view>
+  <view class='btn-confir' bindtap='bindPaymentOk'>
+    <text class="btn-text">已缴费，刷新结果</text>
+  </view>
+
+
+</view>

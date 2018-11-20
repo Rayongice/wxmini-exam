@@ -1,0 +1,75 @@
+<view class='container'>
+  <view class='header'>
+
+    <text class="header-text">每个考生仅可提交一次，请选择最佳照片进行提交</text>
+
+  </view>
+  <view class='photos'>
+    <view class='photo'></view>
+    <view class='photo-left'>
+      <image class="photo-img" src="../../resource/images/image4_03.png"></image>
+      <text class="photo-text-left">示例照片</text>
+    </view>
+    <view class='photo'></view>
+    <!-- 无照片时 -->
+    <block wx:if="{{!hasPhoto}}">
+      <view class='photo-right'>
+        <image class="photo-img" src='../../resource/images/image4_04.png' bindtap='bindtakePhotoFunc'></image>
+        <text class='photo-text-right'>我的照片</text>
+      </view>
+    </block>
+    <!-- 有照片时 -->
+    <block wx:else>
+      <view class='photo-right'>
+        <image class="photo-img" src='{{imgSrc}}' bindtap='bindShowMask'></image>
+        <text class='photo-text-right'>我的照片</text>
+      </view>
+      <view class='magnifier-container'>
+        <image class="magnigier" src='../../resource/images/magnifier.png' mode='aspectFit' bindtap='bindShowMask'></image>
+      </view>
+      <!-- 遮罩层 -->
+      <view class="bigimg-container" hidden="{{bigimgSwitch}}">
+        <view class="bigimg-img">
+          <image src='{{imgSrc}}' mode="aspectFit"/>
+        </view>
+        <view class="bigimg-btns">
+          <view class="bigimg-btns-clear" bindtap="bindCloseMask">
+            <cover-image src="../../resource/images/clear2.png"></cover-image>
+          </view>
+        </view>
+      </view>
+
+
+    </block>
+
+    <view class='photo'></view>
+
+  </view>
+
+  <view class='infos'>
+    <view class="name-info">
+      <label class='infos-title'>姓名</label>
+      <text>张三</text>
+    </view>
+    <view class='ID-info'>
+      <label class='infos-title'>身份证号码</label>
+      <text class='ID-info-text'>110110197608081234</text>
+    </view>
+    <view class='status-info'>
+      <label class='infos-title'>人脸识别结果</label>
+      <text class='status-info-text'>通过</text>
+    </view>
+  </view>
+
+  <view class="btns" bindtap='bindUpPhoto'>
+    <text class="btn-text">确认无误并提交</text>
+  </view>
+
+  <view class="btns-cancel" bindtap='bindtakePhotoFunc'>
+    <text class="btn-cancel-text">重新拍照</text>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">大业市考试招生办公室</text>
+  </view>
+</view>

@@ -1,0 +1,97 @@
+<view class='container'>
+
+  <view class='header'>
+    <view class='title-1'>2019年全国硕士研究生招生考试</view>
+    <view class='title-2'>大业市招考办报考点(代码0067)</view>
+  </view>
+  <view class='info-card'>
+    <image src='../../resource/images/photos_03.png' class='icon-img'></image>
+    <view>
+      <block wx:if="{{allOkStatus}}">
+        <view class="register-container-ok register-status-position">
+          <icon class="register-icon" type='info' color='white' />
+          <text class='register-text'>报名已完成</text>
+        </view>
+      </block>
+
+      <block wx:else>
+        <view class="register-container-no register-status-position">
+          <icon class="register-icon" type='info' color='white' />
+          <text class='register-text'>报名未完成</text>
+        </view>
+      </block>
+      <view class='stu-info'>
+        <view class='stu-name'>易通才子</view>
+        <view class='stu-id'>110031 19760606 41135</view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 上下分割距离 -->
+  <view class='list'>
+    <view class='cell' bindtap='bindToPhoto'>
+      <image class="cellImage" src="../../resource/images/info.png" mode="aspectFit"></image>
+      <text class="cellTitle">照片采集</text>
+      <view wx:if='{{takePhotoStatus}}' class='conditionSta'>
+        <text class='status-title-ok'>已采集</text>
+        <image class='arrow-right' src='../../resource/images/image1_01.png' mode='aspectFit' />
+      </view>
+
+      <view wx:else class='conditionSta'>
+        <text class='status-title'>未采集</text>
+        <image class='arrow-right' src="../../resource/images/photo8_03.png" mode='aspectFit' />
+      </view>
+
+    </view>
+
+
+
+    <view class='cell' bindtap='bindToUpload'>
+      <image class="cellImage" src="../../resource/images/upload.png" mode="aspectFit"></image>
+      <text class="cellTitle">资料上传</text>
+      <view wx:if='{{uploadStatus}}' class='conditionSta'>
+        <text class='status-title-ok'>已上传</text>
+        <image class='arrow-right' src='../../resource/images/image1_01.png' mode='aspectFit' />
+      </view>
+
+      <view wx:else class='conditionSta'>
+        <text class='status-title'>未上传</text>
+        <image class='arrow-right' src="../../resource/images/photo8_03.png" mode='aspectFit' />
+      </view>
+    </view>
+
+
+    <view class='cell' bindtap='bindToPayment'>
+      <image class="cellImage" src="../../resource/images/money.png" mode="aspectFit"></image>
+      <text class="cellTitle">考试缴费</text>
+      <view wx:if='{{paymentStatus}}' class='conditionSta'>
+        <text class='status-title-ok'>已缴费</text>
+        <image class='arrow-right' src='../../resource/images/image1_01.png' mode='aspectFit' />
+      </view>
+
+      <view wx:else class='conditionSta'>
+        <text class='status-title'>未缴费</text>
+        <image class='arrow-right' src="../../resource/images/photo8_03.png" mode='aspectFit' />
+      </view>
+    </view>
+    <view class='cell' bindtap='bindToSignature'>
+      <image class="cellImage" src="../../resource/images/yes.png" mode="aspectFit"></image>
+      <text class="cellTitle">确认书签署</text>
+      <view wx:if='{{signatureStatus}}' class='conditionSta'>
+        <text class='status-title-ok'>已签署</text>
+        <image class='arrow-right' src='../../resource/images/image1_01.png' mode='aspectFit' />
+      </view>
+
+      <view wx:else class='conditionSta'>
+        <text class='status-title'>未签署</text>
+        <image class='arrow-right' src="../../resource/images/photo8_03.png" mode='aspectFit' />
+      </view>
+    </view>
+    <view class="footer">
+      <view>大业市考试招生办公室</view>
+    </view>
+  </view>
+
+
+
+</view>

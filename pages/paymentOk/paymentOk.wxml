@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='images'>
+    <image class="images-ok" src='../../resource/images/image6_03.png' mode='aspectFit'></image>
+    <text class='images-text'>考试已缴费成功</text>
+  </view>
+  <view class="btns" bindtap='bindBackToInfo'>
+    <text class="btn-text">返回首页</text>
+  </view>
+
+</view>

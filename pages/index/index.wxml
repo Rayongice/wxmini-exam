@@ -1,0 +1,37 @@
+<view class='container'>
+  <view class="banner">
+    <image class="banner-image" src="../../resource/images/banner_02_01.png" mode='aspectFit'></image>
+  </view>
+
+  <view class="type-info">
+    <view class='input-first'>
+      <label class="infor-label">预报名号</label>
+      <input placeholder='纯数字格式' class='infor-input' bindblur='bindPreNumber'></input>
+    </view>
+    <view class='input-first'>
+      <label class="infor-label">考生姓名</label>
+      <input placeholder='真实姓名' class='infor-input' bindblur='bindStuName'></input>
+    </view>
+    <view class='input-first'>
+      <label class="infor-label">身份证号</label>
+      <input placeholder='有效证件号码' class='infor-input' bindblur='bindStuID'></input>
+    </view>
+  </view>
+
+  <view class="btns" bindtap='bindCheckInput'>
+    <text class="btn-text">确认</text>
+  </view>
+
+  <view class='btn-forgot'>
+    <text class='btn-forgot-text'>忘记预报名号</text>
+  </view>
+  <view class='btn-forgot'>
+    <text class='btn-forgot-text' bindtap='bindNavAlbFunc'>上传照片</text>
+  </view>
+
+
+  <view class='footer'>
+    <text class="footer-text">大业市招生考试办公室</text>
+  </view>
+
+</view>

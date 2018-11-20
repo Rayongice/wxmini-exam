@@ -1,0 +1,163 @@
+
+.container{
+width: 100%;
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background: #f3f3f3;
+}
+.header{
+  height: 520rpx;
+  width: 100%;
+  /* background: rgba(71, 71, 224, 0.788); */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAADrCAIAAAAqtht9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASZJREFUeNrsVttOwzAMzQ6HYsYm4AGe9jX8Gf+MUBR1GZvaNWlcpIhd1CH7pfaJexof59LFx+fOKYObMkPniALJSWiMaWzEkNJreRMKqFwoGgDzV3LajZeeA2pzdd8cTqhtmilWVEx3zW6yiAMzNGSjTesYWMcbaKfGeVBoJcFx38D6Hsf2d94yd8R7yGfPMJCw88D62oZ3y9x8gHoCB/Rb6jRbtVPol61JQ890TnpRuV4UgxfF69UShhfTdy49Xl3m5uX78+4/7YCXp1QO8+CmqnhbZlXkge2LvW3W28HhEOQDdmqUK2qzTj8xzANTpxdIwlGdo2fq7G0po58AFvEfeF/R3poOjyiXBDR0+tfumwd2jy6+c4t+DtLIFSveuuob50eAAQBnjDZHfwGywAAAAABJRU5ErkJggg==");
+  background-size: contain;
+}
+
+.title-1{
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 300px;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.title-2{
+  color: #fff;
+  font-size: 35rpx;
+  font-weight: 300px;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.info-card{
+  width: 90%;
+  height: 340rpx;
+  background: #fff;
+  position: absolute;
+  top: 190rpx;
+  border-radius: 12rpx;
+  z-index: 3rpx;
+  box-shadow: 0 4rpx 8rpx 0 rgba(0, 0, 0, 0.2);
+
+}
+.icon-img{
+  height: 122px;
+  width: 90px;
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+
+}
+/*注册状态图标*/
+.register-status-position{
+  position: absolute;
+  top: 60rpx;
+  left: 350rpx;
+  height: 32px;
+  width: 120px;
+}
+.register-container-no{
+  background: #f76260;
+  border-radius: 40rpx;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.register-icon{
+  flex: 0.5;
+}
+.register-text{
+  flex: 1.5;
+  font-size: 32rpx;
+  color: #fff;
+}
+.register-container-ok{
+  background: #09bb07;
+  border-radius: 40rpx;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.stu-info{
+  position: absolute;
+  top:145rpx;
+  
+}
+.stu-name{
+  position:relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  left: 400rpx;
+}
+.stu-id{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  position:relative;
+  left: 300rpx;
+}
+.list{
+  width: 100%;
+  position: absolute;
+  top: 560rpx;
+  bottom: 0;
+  background: #fff;
+  font-family:sans-serif;
+  font-size: 35rpx;
+}
+.cell {
+    height: 100rpx;
+    background-color: white;
+    line-height: 100rpx;  
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.cellImage {
+  flex: 1;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.cellTitle {
+  flex: 4;
+
+}
+.status-title{
+  flex: 2;
+  color: #ff0000;
+  font-size: 32rpx;
+}
+.arrow-right{
+  margin-right: 40rpx;
+  flex: 0.5;
+  height: 30rpx;
+  line-height: 30rpx;
+  width: 20rpx;
+}
+.conditionSta{
+  flex: 2.5;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.status-title-ok{
+  flex: 1;
+  color: #2a8cff;
+  font-size: 32rpx;
+}
+
+.bottom-line{
+  height: 3rpx;
+  width: auto;
+}
+.footer{
+  font-family: sans-serif;
+  font-size: 30rpx;
+  color: #9e9d9d;
+  margin-top: 150rpx;
+  text-align: center;
+}

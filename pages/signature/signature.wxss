@@ -1,0 +1,114 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-btn {
+  margin-right: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  text-align: center;
+  border: 4rpx solid #2a8cff;
+  border-radius: 8rpx;
+}
+.header-btn-text{
+  font-size: 32rpx;
+  color: #2a8cff;
+}
+
+
+.header-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 35rpx;
+}
+
+.signature {
+  width: 100%;
+}
+
+.canvas {
+  width: 90%;
+  height: 305px;
+  background-color: #f4f4f4;
+  border: 2rpx solid #ececec;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bg {
+  width: 100%;
+  background: #f4f4f4;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.btns {
+  margin-top: 80rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12rpx;
+  text-align: center;
+  background: #2a8cff;
+}
+
+.btn-text {
+  color: #fff;
+  font-size: 35rpx;
+  font-family: sans-serif;
+  letter-spacing: 2rpx;
+}
+
+.btns-cancel {
+  margin-top: 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.footer {
+  margin-top: 60rpx;
+  height: 160rpx;
+  font-size: 24rpx;
+}
+
+.footer-text {
+  font-family: sans-serif;
+  color: #c4c4c4;
+}
+
+/* .btns{
+  width: 100%;
+  margin:40rpx;
+  background: #f4f4f4;
+  display: flex;
+  flex-flow: column;
+  height: 300rpx;
+  padding-top: 40rpx;
+  align-items: center;
+  
+}
+.btn-img{
+  margin-top:30rpx;
+  height: 100rpx;
+} */

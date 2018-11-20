@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class='images'>
+    <image  class="images-ok"src='../../resource/images/image6_03.png' mode='aspectFit'></image>
+    <text class='images-text'>确认书签署成功</text>
+    <text class='longtext text-margin'>可登陆网站下载打印确认书</text>
+    <text class="longtext">http://www.daye.cn/search/index?searchType=icon&q=签名</text>
+  </view>
+
+  <view class="btns" bindtap='bindBackToInfo'>
+    <text class="btn-text">返回首页</text>
+  </view>
+</view>

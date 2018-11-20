@@ -1,0 +1,137 @@
+<view class='container'>
+  <view class='swiper-tab'>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap='clickTab'>河南户籍考生</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap='clickTab'>非河南户籍考生</view>
+  </view>
+
+  <swiper class="content" current='{{currentTab}}' bindchange='swiperTab' style="height: {{clientHeight?clientHeight*2+'rpx':'auto'}}">
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight*2+'rpx':'auto'}}">
+        <view class="first-column">
+          <text class='text-photo'>上传证件照</text>
+          <view class='header-btn' bindtap='bindToShowExamples'>
+            <text class="header-btn-text">照片示例</text>
+          </view>
+        </view>
+        <view class='second-column'>
+          <image class="card-style" src='../../resource/images/image2_03.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_05.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_07.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_12.png' mode='aspectFit' bindtap='choice' />
+        </view>
+
+        <view class='third-column'>
+          <view class='warn-title'>
+            <image class="icon-warn" src='../../resource/images/icon-warn.png' mode='aspectFit' />
+            <text class='text-warn'>注意事项</text>
+          </view>
+          <view class='warn-content'>
+            <text>
+            提前毕业的考生需要上传《提前毕业证明》并前往招办线下递交《成绩单》，请于11月5日至9日期间到郑州市招办提交有关材料。
+          </text>
+          </view>
+          <view class='gray-border'>
+          </view>
+
+
+          <view class='fourth-column'>
+            <text class='verify-text'>身份证姓名与毕业证姓名一致</text>
+            <view class='verify-btns-ok verify-btn'>
+              <text class="verify-btns-textok">一致</text>
+            </view>
+            <view class='verify-btns-no verify-btn'>
+              <text class="verify-btns-textno">不一致</text>
+            </view>
+          </view>
+
+          <view class="btns" bindtap='bindOkUpInfo'>
+            <text class="btn-text">提交</text>
+          </view>
+
+          <view class='footer'>
+            <text class="footer-text1">请按要求上传真是材料，未按定上传资料导致的问题由考生自行负责</text>
+            <text class='footer-text2'>大业市招生考试办公室</text>
+          </view>
+        </view>
+
+      </scroll-view>
+    </swiper-item>
+    <!-- 非河南籍 -->
+    <swiper-item>
+      <scroll-view scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight*2+'rpx':'auto'}}">
+        <view class="first-column">
+          <text class='text-photo'>上传证件照</text>
+          <view class='header-btn' bindtap='bindToShowExamples'>
+            <text class="header-btn-text">照片示例</text>
+          </view>
+        </view>
+        <view class='second-column'>
+          <image class="card-style" src='../../resource/images/image2_03.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_05.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_07.png' mode='aspectFit' bindtap='choice' />
+          <image class="card-style" src='../../resource/images/image2_12.png' mode='aspectFit' bindtap='choice' />
+        </view>
+
+        <view class='third-column'>
+          <view class='warn-title'>
+            <image class="icon-warn" src='../../resource/images/icon-warn.png' mode='aspectFit' />
+            <text class='text-warn'>注意事项</text>
+          </view>
+          <view class='warn-content'>
+            <text>
+            提前毕业的考生需要上传《提前毕业证明》并前往招办线下递交《成绩单》，请于11月5日至9日期间到郑州市招办提交有关材料。
+          </text>
+          </view>
+          <view class='gray-border'>
+          </view>
+        </view>
+        <view class="unit-column">
+          <view class="unit-column-title">
+            <label class="unit-label">工作单位:</label>
+            <input placeholder='请输入公司全称' class='unit-input' confirm-type="done" value="{{inputText}}" bindconfirm='bindInputConfirFunc'></input>
+            <icon size='25' type='clear' class='unit-icon' bindtap='bindClearContentFunc'></icon>
+          </view>
+          <view class="unit-column-content">
+            <image class="unit-card" src='../../resource/images/image3_03_01.png' mode='aspectFit' bindtap='choice'></image>
+          </view>
+          <view class='gray-border'>
+          </view>
+        </view>
+
+        <view class='fourth-column'>
+          <text class='verify-text'>身份证姓名与毕业证姓名一致</text>
+          <view class='verify-btns-ok verify-btn'>
+            <text class="verify-btns-textok">一致</text>
+          </view>
+          <view class='verify-btns-no verify-btn'>
+            <text class="verify-btns-textno">不一致</text>
+          </view>
+        </view>
+
+        <view class="name-column">
+          <view class="name-column-title">
+            <label class="name-label">曾用名:</label>
+            <input placeholder='请输入姓名' class='name-input' confirm-type="done" value="{{inputText}}"></input>
+            <icon size='25' type='clear' class='name-icon' bindtap='bindClearContentFunc'></icon>
+          </view>
+          <view class="name-column-content">
+            <image class="name-card" src='../../resource/images/image3_06.png' mode='aspectFit' bindtap='choice'></image>
+          </view>
+          <view class='gray-border'>
+          </view>
+        </view>
+
+
+        <view class="btns" bindtap='bindNoUpInfo'>
+          <text class="btn-text">提交</text>
+        </view>
+        <view class='footer'>
+          <text class="footer-text1">请按要求上传真是材料，未按定上传资料导致的问题由考生自行负责</text>
+          <text class='footer-text2'>大业市招生考试办公室</text>
+        </view>
+
+      </scroll-view>
+
+    </swiper-item>
+  </swiper>
+</view>
