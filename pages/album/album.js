@@ -175,39 +175,6 @@ Page({
   },
   //获取用户输入图片序号
   bindUserInput: function(e) {
-    // let that = this;
-    // let length = this.data.images.length;
-    // let fromIndexData = this.data.fromIndexData;
-    // let indexData = e.detail.value;
-    // if (indexData > length && indexData <= 0) {
-    //   wx.showModal({
-    //     title: '图片不存在',
-    //     content: '请重新填写',
-    //     confirmColor: '#2a8cff',
-    //     success: (res) => {
-    //       if (res.confirm) {
-    //         that.setData({
-    //           userInputData: ''
-    //         })
-    //       }
-    //     }
-    //   })
-    // } else if (indexData == fromIndexData+1) {
-    //   wx.showModal({
-    //     title: '序号相等',
-    //     content: '请重新填写',
-    //     confirmColor: '#2a8cff',
-    //     success: (res) => {
-    //       if (res.confirm) {
-    //         that.setData({
-    //           userInputData: ''
-    //         })
-    //       }
-    //     }
-    //   })
-    // } else {
-
-    // }
     this.setData({
       userInputData: e.detail.value
     })
